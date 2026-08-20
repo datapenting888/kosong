@@ -8,19 +8,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #f4f8f1;
-    --bg-deep: #eaf3e4;
-    --surface: #ffffff;
-    --surface-2: #eef6e9;
-    --border: #d3e6c9;
-    --text: #1c2b17;
-    --text-muted: #5e7a52;
-    --text-dim: #8ba37e;
-    --leaf: #2f9e47;
-    --leaf-dim: #d7f0d9;
-    --mint: #0f9e6e;
-    --mint-dim: #d3f2e3;
-    --red: #d9455c;
+    --bg: #060a07;
+    --bg-deep: #030503;
+    --surface: #0b130d;
+    --surface-2: #0f1c12;
+    --border: #1e3a24;
+    --text: #eaf7ec;
+    --text-muted: #86a68d;
+    --text-dim: #4c6a52;
+    --leaf: #35d158;
+    --leaf-dim: #0f2c17;
+    --mint: #22d3ee;
+    --mint-dim: #0c2c34;
+    --red: #ff5d78;
     --radius: 10px;
     --mono: 'IBM Plex Mono', ui-monospace, monospace;
     --sans: 'Inter', sans-serif;
@@ -40,8 +40,8 @@
 
   body{
     background-image:
-      radial-gradient(circle at 15% 0%, rgba(47,158,71,0.08), transparent 40%),
-      radial-gradient(circle at 85% 10%, rgba(15,158,110,0.07), transparent 45%);
+      radial-gradient(circle at 15% 0%, rgba(53,209,88,0.09), transparent 40%),
+      radial-gradient(circle at 85% 10%, rgba(34,211,238,0.06), transparent 45%);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -51,10 +51,10 @@
   .topbar{
     flex-shrink: 0;
     position: relative; top:0; z-index: 50;
-    background: rgba(255,255,255,0.9);
+    background: rgba(5,9,7,0.88);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
-    box-shadow: 0 2px 12px rgba(47,158,71,0.06);
+    box-shadow: 0 2px 14px rgba(53,209,88,0.08);
     padding: 14px 20px;
   }
   .topbar-inner{
@@ -65,11 +65,11 @@
   .brand{ display:flex; align-items:center; gap:12px; }
   .brand-mark{
     width: 38px; height: 38px; border-radius: 9px;
-    background: linear-gradient(155deg, #4caf5f, #1f7a3d);
+    background: linear-gradient(155deg, #4fe07a, #1f9e46);
     display:flex; align-items:center; justify-content:center;
     font-family: var(--display); font-weight:900; font-size: 17px;
-    color: #ffffff;
-    box-shadow: 0 4px 14px rgba(47,158,71,0.28);
+    color: #04140a;
+    box-shadow: 0 4px 16px rgba(53,209,88,0.35);
   }
   .brand-text h1{
     margin:0; font-family: var(--display); font-weight: 800;
@@ -93,7 +93,7 @@
   }
   .flap::after{
     content:''; position:absolute; left:0; right:0; top:50%;
-    height:1px; background: rgba(28,43,23,0.18);
+    height:1px; background: rgba(53,209,88,0.22);
   }
   .clock-label{ font-size: 10px; color: var(--text-dim); text-transform:uppercase; letter-spacing:0.1em; }
 
@@ -139,7 +139,7 @@
     width:6px; height:6px; border-radius:50%;
     background: var(--text-dim);
   }
-  .tab.active{ color: var(--text); border-bottom-color: var(--leaf); }
+  .tab.active{ color: var(--text); border-bottom-color: var(--leaf); text-shadow: 0 0 14px rgba(53,209,88,0.35); }
   .tab.active .dot{ background: var(--leaf); box-shadow: 0 0 8px var(--leaf); }
   .tab:hover:not(.active){ color: var(--text); }
   .tab .count{
@@ -164,7 +164,7 @@
     min-height: 0;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 6px 22px rgba(47,158,71,0.08);
+    box-shadow: 0 6px 26px rgba(53,209,88,0.1);
   }
   .table-scroll{
     overflow-x: auto; overflow-y:auto;
@@ -185,7 +185,7 @@
   thead th .arrow{ font-size:10px; margin-left:5px; color: var(--leaf); opacity:0; }
   thead th.sorted .arrow{ opacity:1; }
   tbody td{
-    padding: 10px 14px; border-bottom: 1px solid rgba(180,204,166,0.55);
+    padding: 10px 14px; border-bottom: 1px solid rgba(53,209,88,0.13);
     color: var(--text); font-family: var(--mono); font-size: 12.5px;
     white-space: nowrap;
   }
@@ -195,10 +195,10 @@
     width: 38px; background: var(--surface-2);
   }
   th.rownum-head{ width: 38px; text-align:center; background: var(--surface-2); }
-  tbody tr:nth-child(even){ background: rgba(47,158,71,0.028); }
+  tbody tr:nth-child(even){ background: rgba(53,209,88,0.035); }
   tbody tr{ transition: background .1s ease; }
-  tbody tr:hover{ background: rgba(47,158,71,0.07); }
-  tbody tr.today{ background: rgba(15,158,110,0.1); }
+  tbody tr:hover{ background: rgba(53,209,88,0.09); }
+  tbody tr.today{ background: rgba(34,211,238,0.09); }
   tbody tr.today td:first-child{ box-shadow: inset 3px 0 0 var(--mint); }
   tbody tr:last-child td{ border-bottom:none; }
 
@@ -206,8 +206,8 @@
     display:inline-block; padding: 2px 9px; border-radius: 20px;
     font-size: 11px; font-weight:600; font-family: var(--sans);
   }
-  .badge.win{ background: rgba(15,158,110,0.14); color: var(--mint); }
-  .badge.lose{ background: rgba(217,69,92,0.13); color: var(--red); }
+  .badge.win{ background: rgba(34,211,238,0.16); color: var(--mint); }
+  .badge.lose{ background: rgba(255,93,120,0.15); color: var(--red); }
   .badge.neutral{ background: var(--surface-2); color: var(--text-muted); }
 
   .state{
@@ -227,26 +227,26 @@
     display:flex; flex-direction:column; gap:0; padding: 14px;
     background: var(--surface-2); border-radius: 8px;
   }
-  .faq-container > *{ border-bottom: 3px solid #bfdcae; }
+  .faq-container > *{ border-bottom: 3px solid rgba(53,209,88,0.22); }
   .faq-container > *:last-child{ border-bottom: none; }
   /* Baris kosong pada spreadsheet asli (di antara kartu) -> ditampilkan sebagai jarak kosong, tanpa garis pemisah */
   .faq-container > .faq-spacer{ border-bottom: none; height: 18px; }
   /* Baris kosong di dalam 1 kartu (mis. di antara 2 baris jawaban) -> jarak kosong tanpa border */
   .content-spacer{ height: 10px; }
   .faq-title{
-    color:#1c7a44; font-family: var(--display); font-weight:800; font-size:14px;
+    color:#4fe07a; font-family: var(--display); font-weight:800; font-size:14px;
     letter-spacing:0.06em; text-transform:uppercase; text-align:center;
     padding: 10px 16px;
   }
 
   /* Kartu link (mis. LINK BOLA) — putih, meniru tampilan asli */
   .faq-link-card{
-    background:#ffffff; border-radius:8px; overflow:hidden;
+    background: var(--surface); border-radius:8px; overflow:hidden;
     border:1px solid var(--border); margin-bottom: 4px;
   }
   .faq-link-row{
     display:flex; align-items:center; gap:14px; flex-wrap:wrap;
-    padding:9px 14px; border-bottom:1px solid #e7f1e1;
+    padding:9px 14px; border-bottom:1px solid rgba(53,209,88,0.14);
   }
   .faq-link-row:last-child{ border-bottom:none; }
   .faq-link-label{
@@ -254,15 +254,15 @@
     white-space:nowrap; min-width:150px;
   }
   .faq-link{
-    color:#1a7a44; font-family: var(--mono); font-size:12.5px; text-decoration:underline;
+    color:#3ddb6e; font-family: var(--mono); font-size:12.5px; text-decoration:underline;
     word-break:break-all; display:inline-flex; align-items:center; gap:5px;
   }
-  .faq-link:hover{ color:#0f5c31; }
+  .faq-link:hover{ color: var(--mint); }
 
   /* Kartu topik / pertanyaan-jawaban / contoh */
   .faq-card{
     display:flex; align-items:stretch; border-radius:6px; overflow:hidden;
-    background:#ffffff; border-left: 3px solid transparent;
+    background: var(--surface); border-left: 3px solid transparent;
   }
   .faq-card .label{
     flex:0 0 130px; display:flex; align-items:center; justify-content:center;
@@ -275,14 +275,14 @@
     flex:1; padding:8px 16px; display:flex; flex-direction:column;
     justify-content:center; gap:4px; min-width:0;
   }
-  .faq-card.question{ border-left-color:#2f9e47; }
-  .faq-card.question .label{ background: linear-gradient(160deg, #3fae57, #1f7a3d); }
-  .faq-card.topic{ border-left-color:#6f8a3e; }
-  .faq-card.topic .label{ background: linear-gradient(160deg, #7c9a49, #556e2c); }
-  .faq-card.example{ border-left-color:#8fa383; }
-  .faq-card.example .label{ background: linear-gradient(160deg, #9bad8f, #74886a); }
-  .faq-card.today-row{ background: var(--mint-dim); border-left-color:#0f9e6e; }
-  .faq-card.today-row .label{ background: linear-gradient(160deg, #17a97a, #0c6b4c); }
+  .faq-card.question{ border-left-color:#35d158; }
+  .faq-card.question .label{ background: linear-gradient(160deg, #3fae57, #1a7a3d); }
+  .faq-card.topic{ border-left-color:#8fae52; }
+  .faq-card.topic .label{ background: linear-gradient(160deg, #7c9a49, #47601f); }
+  .faq-card.example{ border-left-color:#7c9482; }
+  .faq-card.example .label{ background: linear-gradient(160deg, #6f8272, #4a5a4f); }
+  .faq-card.today-row{ background: var(--mint-dim); border-left-color: var(--mint); }
+  .faq-card.today-row .label{ background: linear-gradient(160deg, #1fb8b0, #0c6b68); }
 
   .content-row{ display:flex; gap:22px; flex-wrap:wrap; }
   .content-row .col{ flex:1 1 220px; min-width: 200px; color: var(--leaf); font-size:13px; line-height:1.15; }
@@ -291,8 +291,8 @@
   /* Baris polos (mis. sheet RESULT) — tanpa kotak label nomor, mendekati tampilan spreadsheet asli */
   /* Baris yang berdempetan (tanpa baris kosong di antaranya) digabung dalam 1 .plain-block, */
   /* tanpa garis pemisah di antara baris2 di dalamnya — supaya tetap terasa 1 kesatuan / 1 kata. */
-  .plain-block{ background:#ffffff; padding: 8px 0; }
-  .faq-container > .plain-block{ border-bottom: 3px solid #bfdcae; }
+  .plain-block{ background: var(--surface); padding: 8px 0; }
+  .faq-container > .plain-block{ border-bottom: 3px solid rgba(53,209,88,0.22); }
   .faq-container > .plain-block:last-child{ border-bottom: none; }
   .plain-block:has(.plain-row.today-row){ background: var(--mint-dim); }
   .plain-row{
@@ -305,7 +305,7 @@
   .faq-container > .plain-spacer{ border-bottom: none; height: 18px; }
 
   .faq-note{ color: var(--text-muted); font-size:12px; padding: 3px 14px; line-height:1.6; }
-  .inline-link{ color:#1a7a44; text-decoration:underline; word-break:break-all; }
+  .inline-link{ color:#3ddb6e; text-decoration:underline; word-break:break-all; }
   .inline-link:hover{ color: var(--mint); }
 
   @media (max-width: 640px){
