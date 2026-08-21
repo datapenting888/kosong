@@ -1,1 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilih Pasaran Togel</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
+        body {
+            background-color: #121212;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #0b0704;
+            border: 3px solid #ff7700;
+            border-radius: 16px;
+            padding: 30px;
+            width: 100%;
+            max-width: 900px;
+            box-shadow: 0 0 25px rgba(255, 119, 0, 0.4);
+            text-align: center;
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #ff8800;
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(255, 136, 0, 0.5);
+        }
+
+        .dice-icon {
+            font-size: 28px;
+        }
+
+        .grid-pasaran {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .btn-pasaran {
+            background-color: transparent;
+            border: 2px solid #ff7700;
+            color: #ff9933;
+            padding: 12px 10px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .btn-pasaran:hover {
+            background-color: #ff7700;
+            color: #000;
+            box-shadow: 0 0 15px #ff7700;
+            transform: translateY(-2px);
+        }
+
+        /* Baris terakhir dengan 3 item agar tetap rapi di tengah */
+        .grid-pasaran-bottom {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .grid-pasaran-bottom .btn-pasaran {
+            width: calc(25% - 11.25px);
+        }
+
+        /* Responsif untuk layar HP/Tablet */
+        @media (max-width: 768px) {
+            .grid-pasaran {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .grid-pasaran-bottom {
+                flex-direction: column;
+                align-items: center;
+            }
+            .grid-pasaran-bottom .btn-pasaran {
+                width: 100%;
+            }
+            .header h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Bagian Judul dengan Ikon Dadu -->
+        <div class="header">
+            <span class="dice-icon">🎲</span>
+            <h1>Pilih Pasaran Togel</h1>
+            <span class="dice-icon">🎲</span>
+        </div>
+
+        <!-- Daftar Tombol Pasaran (Grid Utama 4 Kolom) -->
+        <div class="grid-pasaran">
+            <button class="btn-pasaran">Bangkok Pools</button>
+            <button class="btn-pasaran">Brunei Pools</button>
+            <button class="btn-pasaran">Bullseye</button>
+            <button class="btn-pasaran">California</button>
+
+            <button class="btn-pasaran">Carolina</button>
+            <button class="btn-pasaran">Chelsea Pools</button>
+            <button class="btn-pasaran">Florida</button>
+            <button class="btn-pasaran">Hokidraw</button>
+
+            <button class="btn-pasaran">Hongkong Lotto</button>
+            <button class="btn-pasaran">Huahin Lottery</button>
+            <button class="btn-pasaran">Kentucky</button>
+            <button class="btn-pasaran">Kingkong 4D</button>
+
+            <button class="btn-pasaran">Magnum4D</button>
+            <button class="btn-pasaran">Nevada</button>
+            <button class="btn-pasaran">New York</button>
+            <button class="btn-pasaran">Oregon</button>
+
+            <button class="btn-pasaran">Pcso</button>
+            <button class="btn-pasaran">Poipet Lottery</button>
+            <button class="btn-pasaran">Singapore 4D</button>
+            <button class="btn-pasaran">Sydney Lotto</button>
+        </div>
+
+        <!-- Baris Terakhir (3 Tombol di Tengah) -->
+        <div class="grid-pasaran-bottom">
+            <button class="btn-pasaran">Totocambodialive</button>
+            <button class="btn-pasaran">Toto Macau</button>
+            <button class="btn-pasaran">Toto Mali</button>
+        </div>
+    </div>
+
+</body>
+</html>
